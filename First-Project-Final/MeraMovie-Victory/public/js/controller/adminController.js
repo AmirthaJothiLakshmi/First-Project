@@ -337,7 +337,14 @@ refreshomdb();
                                   refreshomdb();
                               });
                           };
-
+                          $scope.removeMovie = function (id){
+                            console.log(id);
+                      $http.delete('/movie/movie/' + id._id).success(function (response) {
+                      console.log(response);
+                    console.log('DELETED SUCCESSFULLY');
+                              refreshomdb();
+                      });
+                    };
 
 var refresh5 = function () {
   $http.get('/movieinfo/movieinfo').success(function (response) {

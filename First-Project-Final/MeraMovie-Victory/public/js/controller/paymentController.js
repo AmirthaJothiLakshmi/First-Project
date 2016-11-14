@@ -9,8 +9,8 @@ console.log($scope.book);
 $scope.alert = function(){ alert("Ticket booked successfully");
 }
 
-
-$scope.home1 = function () { $location.path('/home');
+$scope.home1 = function () {
+  $location.path('/home');
 
 }
 };

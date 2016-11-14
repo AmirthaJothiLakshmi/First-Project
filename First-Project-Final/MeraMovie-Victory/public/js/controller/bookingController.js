@@ -228,6 +228,33 @@ var refreshbook = function () {
 
   refreshbook();
 
+//   var refreshrate = function () {
+//         $http.get('/rating/rating').success(function (response) {
+//             console.log('READ IS SUCCESSFUL');
+//             $scope.ratelist = response;
+//             $scope.rate = "";
+//         });
+//     };
+//
+//     refreshrate();
+//
+//
+// $scope.rateMovie =function () {
+// //alert($scope.book.seatselected);
+// $http.post('/rating/rating',$scope.rate).success(function (response) {
+// console.log(response);
+// console.log("CREATE IS SUCCESSFUL");
+// refreshbook();
+// $rootScope.bookingDetails = $scope.rate;
+// $rootScope.bookingMovie1 = $scope.book.movieName;
+// $location.path('/rating');
+//
+//
+// });
+// };
+
+
+
 
 $scope.bookMovieInfo = function () {
 //alert($scope.book.seatselected);

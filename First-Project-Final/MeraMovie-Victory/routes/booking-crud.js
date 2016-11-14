@@ -55,13 +55,9 @@ router.post('/booking', function(req, res){
   var time = req.body.time;
   var city = req.body.city;
   var date = req.body.date;
-  // var email = req.body.email;
     var tic = req.body.tickets;
   var pric = req.body.totalPrice;
-//  var seat = req.body.seatselected;
 var seat=req.body.seatselected;
-// var bseat=req.body.blockedSeat;
-// var pstatus=req.body.payStatus;
     var booking = new Booking({
     bookingID : id,
   movieName:name,

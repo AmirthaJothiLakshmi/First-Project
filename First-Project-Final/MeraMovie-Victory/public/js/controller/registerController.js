@@ -2,26 +2,26 @@
 
 module.exports = function ($scope, $q, $location, AuthService) {
 
-    $scope.login = function () {
+    $scope.register = function () {
 
       // initial values
       $scope.error = false;
       $scope.disabled = true;
 
-      // call login from service
-      AuthService.login($scope.loginForm.username, $scope.loginForm.password, $q)
+      // call register from service
+      AuthService.register($scope.registerForm.username, $scope.registerForm.password, $q)
         // handle success
         .then(function () {
-          $location.path('/');
+          $location.path('/login');
           $scope.disabled = false;
-          $scope.loginForm = {};
+          $scope.registerForm = {};
         })
         // handle error
         .catch(function () {
           $scope.error = true;
-          $scope.errorMessage = "Invalid username and/or password";
+          $scope.errorMessage = "Something went wrong!";
           $scope.disabled = false;
-          $scope.loginForm = {};
+          $scope.registerForm = {};
         });
 
     };

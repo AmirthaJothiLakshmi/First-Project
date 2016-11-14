@@ -190,6 +190,12 @@
 		<td><button ng-click="getData()" class="btn btn-primary">omdb</button></td>
 <td><button ng-click="addMovie()" class="btn btn-primary">Add Movie</button></td>
 </tr>
+<tr ng-repeat=" movies in movieObj">
+		<!-- <td>{{discount.offerID}}</td> -->
+		<td>{{movies.Title}}</td>
+		<td>{{movies.Year}}</td>
+<td><button ng-click="removeMovie(movieObj)" class="btn btn-danger">Remove</button></td>
+</tr>
 <!--
 <tr ng-repeat=" movies in movieObj">
 
